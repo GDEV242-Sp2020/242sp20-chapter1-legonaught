@@ -11,10 +11,16 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
-    private Circle sun;
+    private Square topL; //Black
+    private Square topR; //Yellow
+    private Square botL; //Yellow
+    private Square botR; //Black
+    private Triangle point1;
+    private Triangle point2;
+    private Triangle point3;
+    private Triangle point4;
+    private Circle center;
+    private Person man;
     private boolean drawn;
 
     /**
@@ -22,10 +28,14 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
-        sun = new Circle();
+        topL = new Square();
+        topR = new Square();
+        botL = new Square();
+        botR = new Square();
+        point1 = new Triangle();
+        point2 = new Triangle();
+        center = new Circle();
+        man = new Person();
         drawn = false;
     }
 
@@ -35,51 +45,93 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.changeColor("blue");
-            wall.makeVisible();
+            topL.moveHorizontal(-200);
+            topL.moveVertical(-100);
+            topL.changeSize(100);
+            topL.changeColor("black");
+            topL.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
+            topR.moveHorizontal(-100);
+            topR.moveVertical(-100);
+            topR.changeSize(100);
+            topR.changeColor("yellow");
+            topR.makeVisible();
+            
+            botL.moveHorizontal(-200);
+            botL.moveVertical(0);
+            botL.changeSize(100);
+            botL.changeColor("yellow");
+            botL.makeVisible();
+            
+            botR.moveHorizontal(-100);
+            botR.moveVertical(0);
+            botR.changeSize(100);
+            botR.changeColor("black");
+            botR.makeVisible();
+            
+            center.moveHorizontal(-60);
+            center.moveVertical(-10);
+            center.changeSize(80);
+            center.changeColor("blue");
+            center.makeVisible();
+            
+            point1.moveHorizontal(0);
+            point1.moveVertical(-120);
+            point1.changeSize(80, 20);
+            point1.changeColor("blue");
+            point1.makeVisible();
+            
+            point2.moveHorizontal(0);
+            point2.moveVertical(80);
+            point2.changeSize(-80, 20);
+            point2.changeColor("blue");
+            point2.makeVisible();
+            
+            man.moveHorizontal(-70);
+            man.moveVertical(-80);
+            man.changeSize(40, 30);
+            man.changeColor("red");
+            man.makeVisible();
+            
             drawn = true;
         }
     }
 
     /**
      * Change this picture to black/white display
-     */
+     *
     public void setBlackAndWhite()
     {
         wall.changeColor("black");
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");
-    }
+    }*/
 
     /**
      * Change this picture to use color display
-     */
+     *
     public void setColor()
     {
         wall.changeColor("red");
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");
-    }
+    }*/
+    
+    /**
+     * Start sunset
+     *
+    public void sunset()
+    {
+        sun.slowMoveVertical(250);
+    }*/
+    
+    /**
+     * Start sunrise
+     *
+    public void sunrise()
+    {
+        sun.slowMoveVertical(-250);
+    }*/
 }
