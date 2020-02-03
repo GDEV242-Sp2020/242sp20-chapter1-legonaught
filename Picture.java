@@ -17,8 +17,6 @@ public class Picture
     private Square botR; //Black
     private Triangle point1;
     private Triangle point2;
-    private Triangle point3;
-    private Triangle point4;
     private Circle center;
     private Person man;
     private boolean drawn;
@@ -99,39 +97,31 @@ public class Picture
 
     /**
      * Change this picture to black/white display
-     *
+     */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
-        sun.changeColor("black");
-    }*/
+        topL.changeColor("black");
+        topR.changeColor("black");
+        botL.changeColor("black");
+        botR.changeColor("black");
+        center.changeColor("white");
+        point1.changeColor("white");
+        point2.changeColor("white");
+        man.changeColor("black");
+    }
 
     /**
      * Change this picture to use color display
-     *
+     */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
-        sun.changeColor("yellow");
-    }*/
-    
-    /**
-     * Start sunset
-     *
-    public void sunset()
-    {
-        sun.slowMoveVertical(250);
-    }*/
-    
-    /**
-     * Start sunrise
-     *
-    public void sunrise()
-    {
-        sun.slowMoveVertical(-250);
-    }*/
+        topL.changeColor("black");
+        topR.changeColor("yellow");
+        botL.changeColor("yellow");
+        botR.changeColor("black");
+        center.changeColor("blue");
+        point1.changeColor("blue");
+        point2.changeColor("blue");
+        man.changeColor("red");
+    }
 }
