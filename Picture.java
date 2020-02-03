@@ -1,13 +1,8 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
+ * The picture this class draws is a person trapped inside of a spiked sphere
  *
- * This class was written as an early example for teaching Java with BlueJ.
- * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author  Ben Kiley
+ * @version 2020.02.03
  */
 public class Picture
 {
